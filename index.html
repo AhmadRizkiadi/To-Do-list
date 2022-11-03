@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>To do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="head_bar">
+  <h1 class="head_bar__title">To Do List</h1>
+</header>
+<main>
+  <section class="input_section">
+    <h2>Insert To Do</h2>
+    <form id="inputTodo">
+      <div class="input">
+        <label for="inputTodoKegiatan">Kegiatan</label>
+        <input id="inputTodoKegiatan" type="text" required>
+      </div>
+      <div class="input">
+        <label for="inputTodoDeskripsi">Deskripsi Kegiatan</label>
+        <input id="inputTodoDeskripsi" type="text" required>
+      </div>
+      <div class="input_inline">
+        <label for="inputTodoIsComplete">Done</label>
+        <input id="inputTodoIsComplete" type="checkbox" onclick="checkbox()">
+      </div>
+      <button id="todoSubmit" type="submit">Masukkan ke Bagian <span id="undone" style="display:block">To Do</span><span id="done" style="display:none">Done</span></button>
+    </form>
+  </section>
+  
+  
+  <section class="todo_shelf">
+    <h2>To Do</h2>
+    <div id="incompleteTodoshelfList" class="todo_list">
+    </div>
+  </section>
+  
+  <section class="todo_shelf">
+    <h2>Done</h2>
+    <div id="completeTodoshelfList" class="todo_list">
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
